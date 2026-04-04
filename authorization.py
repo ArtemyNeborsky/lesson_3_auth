@@ -15,11 +15,11 @@ def authorization(login, password, cipher):
 
 def main():
     key = load_key()
-    cipher = Fernet(key)
+    f = Fernet(key)
     while True:
         login = input("Введите логин: ")
         password = input("Введите пароль: ")
-        if authorization(login, password, cipher):
+        if authorization(login, password, f):
             print("вы авторизированны")
             break
         else:

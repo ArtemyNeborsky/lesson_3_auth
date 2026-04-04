@@ -36,13 +36,13 @@ def view(cipher):
 def main():
     write_key()
     key = load_key()
-    cipher = Fernet(key)
+    f = Fernet(key)
     while True:
         choice = input("1. Посмотреть, 2. Добавить, 3. Выйти ")
         if choice == "1":
-            view(cipher)
+            view(f)
         elif choice == "2":
-            add(cipher)
+            add(f)
         elif choice == "3":
             break
 
