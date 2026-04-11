@@ -5,7 +5,7 @@ from cryptography.fernet import Fernet
 
 def write_key():
     key = Fernet.generate_key()
-    if os.path.exists("key.hey"):
+    if os.path.exists("key.key"):
         with open('key.key', 'wb') as key_file:
             key_file.write(key)
 
